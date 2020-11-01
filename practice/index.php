@@ -8,5 +8,6 @@ if ($result->num_rows > 0) {
         echo $row['head'];
     }
 }
-
+$name = 'test';
 ?>
+<p><?=$name?></p>
