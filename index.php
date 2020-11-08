@@ -10,7 +10,7 @@ $sql = "SELECT * FROM test";
 $result = $link->query($sql);
 if ($result->num_rows > 0) {
     // output data of each row
-    echo '<div class="row">';
+    echo '<div class="row container mx-auto pt-5 pb-5">';
     while($row = $result->fetch_assoc()) {
         // var_dump($row);
         echo '<div class="card col-4" style="background-color:coral;">
