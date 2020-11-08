@@ -13,7 +13,7 @@ if ($result->num_rows > 0) {
     echo '<div class="row">';
     while($row = $result->fetch_assoc()) {
         // var_dump($row);
-        echo '<div class="card" style="width: 18rem;">
+        echo '<div class="card col-4" style="background-color:coral;">
         <div class="card-body">
             <img src="'.$row["image"].'" width="100%">
           <h5 class="card-title sdev">'.$row["head"].'</h5>
@@ -24,6 +24,5 @@ if ($result->num_rows > 0) {
     }
 }
 // ending point
-
 ?>
 
