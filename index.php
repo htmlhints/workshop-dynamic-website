@@ -10,7 +10,8 @@ $sql = "SELECT * FROM test";
 $result = $link->query($sql);
 if ($result->num_rows > 0) {
     // output data of each row
-    echo '<div class="row container mx-auto pt-5 pb-5">';
+    echo '
+    <div class="row container mx-auto pt-5 pb-5">';
     while($row = $result->fetch_assoc()) {
         // var_dump($row);
         echo '
@@ -25,7 +26,10 @@ if ($result->num_rows > 0) {
             </div>
         </div>';
     }
+    echo '</div>';
 }
 // ending point
+
+include 'inc/footer.php';
 ?>
 
