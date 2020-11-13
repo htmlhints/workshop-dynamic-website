@@ -6,11 +6,17 @@
     </p>
 </div>
 <form class="newsletter my-3" method="post" id="contact_modal_form" onsubmit="return false;">
-          <input type="email" name="news_email" id="news_email"  class="form-control" placeholder="Your Email Address" value="">
-          <button class="my-3" id="element">
-			  Subscribe
-          </button>
-	</form>
+        <input type="email" name="news_email" id="news_email"  class="form-control" placeholder="Your Email Address" value="">
+        <button class="my-3" id="element">
+            Subscribe
+        </button>
+</form>
+<!-- <form class="newsletter my-3" method="get"  action="https://localhost/workshop/inc/ajax/form.php" >
+        <input type="email" name="news_email" id="news_email"  class="form-control" placeholder="Your Email Address" value="">
+        <button class="my-3" id="element">
+            Subscribe
+        </button>
+</form> -->
 </footer>
 <script>
     $("#contact_modal_form").submit(function(){
