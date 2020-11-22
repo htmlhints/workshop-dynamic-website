@@ -21,7 +21,7 @@ if ($result->num_rows > 0) {
                     <img src="'.$row["image"].'" width="100%">
                     <h5 class="card-title sdev">'.$row["head"].'</h5>
                     <p class="card-text">'.$row["description"].'</p>
-                    <a href="blog.php?url=123" class="btn btn-primary">Go somewhere</a>
+                    <a href="blog.php?url='.$row["id"].'" class="btn btn-primary">Go somewhere</a>
                 </div>
             </div>
         </div>';
