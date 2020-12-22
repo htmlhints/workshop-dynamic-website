@@ -36,7 +36,7 @@ if ($result->num_rows > 0) {
        <div class="card-body">
            <h5 class="card-title">'.$row['head'].'</h5>
            <p class="card-text"></p>
-           <a href="#" class="btn btn-primary">Go somewhere</a>
+           <a href="https://localhost/workshop/blog.php?id='.$row['id'].'" class="btn btn-primary">Go somewhere</a>
        </div>
    </div>';
     }
