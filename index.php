@@ -1,4 +1,5 @@
 <?php
+include 'inc/config.php';
 include 'inc/header.php';
 ?>
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
@@ -22,23 +23,25 @@ include 'inc/header.php';
     <span class="sr-only">Next</span>
   </a>
 </div>
-<div class="d-flex pb-5 mt-5">
-    <div class="card col-4 mx-2">
-        <img src="https://i3.ytimg.com/vi/qUlk8q-lvgA/maxresdefault.jpg" class="card-img-top" alt="https://i3.ytimg.com/vi/qUlk8q-lvgA/maxresdefault.jpg">
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-    </div>
-    <div class="card col-4 mx-2">
-        <img src="https://i3.ytimg.com/vi/qUlk8q-lvgA/maxresdefault.jpg" class="card-img-top" alt="https://i3.ytimg.com/vi/qUlk8q-lvgA/maxresdefault.jpg">
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-    </div>
+<div class="d-flex flex-wrap pb-5 mt-5">
+<?php
+$sql = "SELECT * FROM test";
+$result = $link->query($sql);
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+       echo '
+       <div class="card col-4 mx-2">
+       <img src="https://i3.ytimg.com/vi/qUlk8q-lvgA/maxresdefault.jpg" class="card-img-top" alt="https://i3.ytimg.com/vi/qUlk8q-lvgA/maxresdefault.jpg">
+       <div class="card-body">
+           <h5 class="card-title">'.$row['head'].'</h5>
+           <p class="card-text"></p>
+           <a href="#" class="btn btn-primary">Go somewhere</a>
+       </div>
+   </div>';
+    }
+}
+?>
 </div>
 <?php
 include 'inc/footer.php';
