@@ -25,14 +25,14 @@ include 'inc/header.php';
 </div>
 <div class="d-flex flex-wrap pb-5 mt-5">
 <?php
-$sql = "SELECT * FROM test";
+$sql = "SELECT * FROM test order by id desc LIMIT 5";
 $result = $link->query($sql);
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
        echo '
        <div class="card col-4 mx-2">
-       <img src="https://i3.ytimg.com/vi/qUlk8q-lvgA/maxresdefault.jpg" class="card-img-top" alt="https://i3.ytimg.com/vi/qUlk8q-lvgA/maxresdefault.jpg">
+       <img src="'.$row['image'].'" class="card-img-top" alt="">
        <div class="card-body">
            <h5 class="card-title">'.$row['head'].'</h5>
            <p class="card-text"></p>
